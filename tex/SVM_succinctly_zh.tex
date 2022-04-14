@@ -1,0 +1,69 @@
+\documentclass{ctexbook}
+\usepackage{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[title]{appendix}%
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=cyan,
+}
+\usepackage{subfig,graphicx}
+\graphicspath{{../pic/}}
+
+\usepackage{caption}
+\usepackage[dvipsnames]{xcolor}  % 更全的色系
+\usepackage{listings}  % 排代码用的宏包
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% listings设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+    language = Python,
+    backgroundcolor = \color[RGB]{245,245,244},    % 背景色
+    basicstyle = \small\ttfamily,           % 基本样式 + 小号字体
+    rulesepcolor= \color{gray},             % 代码块边框颜色
+    breaklines = true,                  % 代码过长则换行
+    numbers = left,                     % 行号在左侧显示
+    numberstyle = \small,               % 行号字体
+    keywordstyle = \color[RGB]{40,40,255},    % 关键字颜色
+    commentstyle =\it\color[RGB]{0,96,96},    % 注释格式和颜色
+    stringstyle = \rmfamily\slshape\color[RGB]{128,0,0},    % 字符串格式
+    % frame = shadowbox,                  % 用（带影子效果）方框框住代码块
+    showspaces = false,                 % 不显示空格
+    columns = fixed,                    % 字间距固定
+    %escapeinside={<@}{@>}              % 特殊自定分隔符：<@可以自己加颜色@>
+    morekeywords = {as},                % 自加新的关键字（必须前后都是空格）
+    deletendkeywords = {compile}        % 删除内定关键字；删除错误标记的关键字用deletekeywords删！
+}
+
+\begin{document}
+    
+\title{简要支持向量机}
+\author{}
+
+\maketitle
+
+\tableofcontents
+
+% \mainmatter % 开始主要内容
+
+\include{0Preface}
+\include{0Introduction}
+\include{1Prerequisites}
+\include{2ThePreceptron}
+\include{3TheSVMOP}
+\include{4SolvingTheOP}
+\include{5SoftMarginSVM}
+\include{6Kernels}
+\include{7TheSMOAlgorithm}
+\include{8MultiClassSVMs}
+\include{9Conclusion}
+\include{10AppendixA}
+\include{11AppendixB}
+
+\end{document}
